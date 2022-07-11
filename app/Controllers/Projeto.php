@@ -7,29 +7,12 @@ use App\Models\ProjetoModel;
 
 class Projeto extends BaseController
 {
-	private $atividadeModel;
+	private $projetoModel;
 
 	public function __construct()
 	{
 		$this->projetoModel = new ProjetoModel();
 	}	
-
-	public function index()
-	{
-		return view('projetos', [
-		'projetos' => $this->projetoModel->paginate(10),
-		'pager' => $this->projetoModel->pager 
-		]);
-	}
-
-	public function delete($id)
-	{
-		if($this->projetoModel->delete($id)){
-			echo view('messages', [
-				'message' => 'Projeto excluído com sucesso!'
-			]);
-		}
-	}
 
 	public function create()
 	{
@@ -40,10 +23,17 @@ class Projeto extends BaseController
 	{
 		if($this->projetoModel->save($this->request->getPost())) {
 			return view('messages', [
-				'message' => "Projeto Cadastrado com Sucesso!"
+				'message' => "Projeto Salvo com Sucesso!"
 			]);
 		}else {
-			echo "Erro ao Cadastrar o Projeto!";
+			echo "Erro ao Salvar o Projeto!";
 		}
+	}
+
+	public function projetoId($id) 
+	{
+		return view('form_projeto', [
+			'projeto' => $this->projetoModel->find($id)
+		]);
 	}
 }

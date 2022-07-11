@@ -32,19 +32,21 @@
         <div class="container mt-5">
             <?= form_open('atividade/store');?>
             <div class="form-group">
-                <label for="dataCadastro">Data do Cadastro</label>
-                <input type="date" name="dataCadastro" id="dataCadastro" class="form-control mb-3">
+                <label for="created_at"></label>
+                <input type="hidden" name="created_at" value="<?= isset($atividade['created_at']) ? $atividade['created_at'] : ''; ?>" id="created_at" class="form-control mb-3">
             </div> 
             <div class="form-group">
-                <label for="descricao">Descrição</label>
-                <input type="text" name="descricao" id="descricao" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="idProjeto">Projeto </label>
-                <select class="form-control" id="idProjeto" name="idProjeto">
-                    <option></option>
+                <label for="id">ID Projeto </label>
+                <select class="form-control" id="id" name="id">
+                <option><?= isset($atividade['id']) ? $atividade['id'] : ''; ?></option>
                 </select>
+            </div>    
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <input type="text" name="descricao" value="<?= isset($atividade['descricao']) ? $atividade['descricao'] : ''; ?>" id="descricao" class="form-control">
+            </div>
             <button type="submit" value="Salvar" class="btn btn-primary mt-4">Salvar</button>
+            <input type="hidden" name="id" value="<?= isset($atividade['id']) ? $atividade['id'] : ''; ?>" id="id" class="form-control">
             <?= form_close();?>
         </div>
     

@@ -37,21 +37,21 @@
   </head>
   <body>
     <div class="container mt-5">
-        <?= anchor(base_url('atividade/create'), 'Nova Atividade', ['class' => 'btn btn-success mb-3']) ?>
-        <?= anchor(base_url('projeto/create'), 'Cadastrar Projeto', ['class' => 'btn btn-info mb-3 ml-3']) ?>
+        <?= anchor(base_url('projeto/create'), 'Cadastrar Projeto', ['class' => 'btn btn-info mb-3']) ?>
+        <?= anchor(base_url('atividade/create'), 'Nova Atividade', ['class' => 'btn btn-success ml-3 mb-3']) ?>
         <?= anchor(base_url('atividade/search'), 'Buscar Atividade', ['class' => 'btn btn-secondary mb-3 ml-3']) ?>
     <table class="table">
         <tr>
-            <th>ID</th>
+            <th>ID Atividade</th>
             <th>Data de Cadastro</th>
             <th>Descrição</th>
-            <th>Id do Projeto</th>
+            <th>ID do Projeto</th>
             <th>Ações</th>
         </tr>
         <?php foreach($atividades as $atividade): ?>
             <tr>
                 <td><?= $atividade['id'] ?></td>
-                <td><?= $atividade['dataCadastro'] ?></td>
+                <td><?= date('d-m-Y H:i:s', strtotime($atividade['created_at'])); ?></td>
                 <td><?= $atividade['descricao'] ?></td>
                 <td><?= $atividade['idProjeto'] ?></td>
                 

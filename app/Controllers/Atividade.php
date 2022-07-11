@@ -6,7 +6,6 @@ use App\Controllers\BaseController;
 use App\Models\AtividadeModel;
 
 
-
 class Atividade extends BaseController
 {
 	private $atividadeModel;
@@ -14,6 +13,7 @@ class Atividade extends BaseController
 	public function __construct()
 	{
 		$this->atividadeModel = new AtividadeModel();
+		
 	}	
 
 	public function index()
@@ -35,17 +35,26 @@ class Atividade extends BaseController
 
 	public function create()
 	{
-		return view('form');	
+		return view('form');
+			
 	}
 
 	public function store()
 	{
 		if($this->atividadeModel->save($this->request->getPost())) {
 			return view('messages', [
-				'message' => "Atividade Cadastrada com Sucesso!"
+				'message' => "Atividade Salva com Sucesso!"
 			]);
 		}else {
-			echo "Erro ao Cadastrar Atividade!";
+			echo "Erro ao Salvar Atividade!";
 		}
+	}
+
+	public function edit($id)
+	{
+		return view('form', [
+			'atividade' => $this->atividadeModel->find($id)
+		]);
+				
 	}
 }

@@ -35,11 +35,11 @@
                 <label for="descricao">Descrição</label>
                 <input type="text" name="descricao" id="descricao" class="form-control">
             </div>
-            <!-- <div class="form-group">
-                <label for="idProjeto">Id do Projeto</label>
-                <input type="text" name="idProjeto" id="idProjeto" class="form-control mb-3">
-            </div> -->
-            <button type="submit" value="Salvar" class="btn btn-primary mt-4">Salvar</button>
+            <div class="form-group">
+                <label for="idProjeto"></label>
+                <input type="hidden" name="idProjeto" id="idProjeto" class="form-control">
+            </div>
+            <button type="submit" value="Salvar" class="btn btn-primary">Salvar</button>
             <?= form_close();?>
         </div>
     
