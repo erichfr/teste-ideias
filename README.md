@@ -33,6 +33,6 @@ Pendentes:
 -- Criar projeto React para consumir Api de Atividades; 
 -- Campo de busca pelo ID da Atividade.
 ```
-O projeto não atende a todos os requisitos.
+O projeto não atende a todos os requisitos.<br>
 Parte do projeto pode ser feito posteriormente de acordo com o interesse e retorno da empresa.
 
