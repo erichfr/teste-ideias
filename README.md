@@ -19,12 +19,12 @@ Excluir Atividade.
 ```
 Concluídos:
 
--- Listagem das atividades cadastrados com a coluna do projeto;
+-- Listagem das atividades cadastradas com a coluna do projeto;
 -- Cadastro;
 -- Alteração;
 -- Exclusão;
 -- Controller chamado "Atividades";
--- Importar o arquivo banco.sql para o banco de dados;
+-- Arquivo de banco.sql(db_ideais) para o banco de dados;
 -- Acessar a rota /principal para criar um projeto e algumas atividades
 
 Pendentes:
