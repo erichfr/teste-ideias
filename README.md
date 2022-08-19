@@ -1,7 +1,5 @@
 # Teste Prático Ideias
-```
-Php + Codeigniter + Mysql
-```
+
 ## Iniciando o Projeto
 Clonar ou fazer o download do projeto. 
 
