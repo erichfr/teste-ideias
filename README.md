@@ -15,7 +15,7 @@ Excluir Atividade.
 
 ### Detalhes:
 ```
-O projeto não atende a todos os requisitos.<br>
+O projeto não atende a todos os requisitos.
 Parte do projeto pode ser feito posteriormente de acordo com o interesse e retorno da empresa.
 ```
 
